@@ -58,7 +58,8 @@ while True:
             with youtube_dl.YoutubeDL(ydl_opts) as ydl:
                 ydl.download(['https://www.youtube.com/watch?v=FX9eEhoRZhY'])
                 os.system("ffmpeg -i FX9eEhoRZhY.webm outro.mp3")
-                os.system("ffplay -autoexit -nodisp outro.mp3")
+                # play outro.mp3 with autoexit no display and no console using ffplay
+                os.system("ffplay -autoexit -nodisp -hide_banner -loglevel panic outro.mp3")
                 os.system("ffplay -autoexit mCh6VpxLubc.mp4")
                 break
         time.sleep(10)
