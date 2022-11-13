@@ -1,0 +1,1 @@
+pyinstaller --noconfirm --onefile --windowed  "C:/Users/hamza/OneDrive/Documents/GitHub/botnet-troll/main.py"
