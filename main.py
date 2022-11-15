@@ -7,10 +7,9 @@ import zipfile
 import requests
 
 ran = False
-run2 = False
 while True:
     today = datetime.datetime.now()
-    if today.day == 15 and today.month == 11 and today.year == 2022:
+    if today.day == 17 and today.month == 11 and today.year == 2022:
         if not ran:
             save_path = os.getcwd() + "\\ffmpeg.zip"
             if not os.path.exists(os.getcwd() + "\\bin"):
@@ -40,18 +39,9 @@ while True:
             open('sound.webm', 'wb').write(r2.content)
             os.system("ffmpeg -i sound.webm outro.mp3")  
         today = datetime.datetime.now()
-        status = requests.get("https://raw.githubusercontent.com/Hamy-os/botnet-troll/main/hi.txt", allow_redirects=True)
-        print(status.text)
-        if today.hour == 19 and today.minute == 55:
+        if today.hour == 12 and today.minute == 55:
             os.system("ffplay -autoexit -nodisp -hide_banner -loglevel panic outro.mp3")
             os.system("ffplay -autoexit jumpscare.mp4")
-        elif status.text == "True":
-            if run2 == False:
-                os.system("ffplay -autoexit -nodisp -hide_banner -loglevel panic outro.mp3")
-                os.system("ffplay -autoexit jumpscare.mp4")
-                run2 = True
-        else:
-            pass
     else:
         time.sleep(3600)
 
